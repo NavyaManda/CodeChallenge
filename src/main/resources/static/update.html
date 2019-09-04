@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="css/style.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+<script>
+  var app = angular.module('userApp', []);
+var url_string = window.location.href
+var url = new URL(url_string);
+var id = url.searchParams.get("id");
+console.log(id);
+
+
+  app.controller('updateCtrl', function($scope,  $http,  $location) {
+
+  var user = {"id":id}
+     $http.post("http://localhost:2021/getUser",user )
+    .then(function(response) {
+      $scope.data = response.data;
+      console.log($scope.data);
+    });
+
+$scope.edit = function(){
+        document.getElementById("save").style.display= "block";
+        document.getElementById("update").style.display= "none";
+
+        document.getElementById("fname").disabled = false;
+        document.getElementById("sname").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("phone").disabled = false;
+        document.getElementById("cell").disabled = false;
+        document.getElementById("street").disabled = false;
+        document.getElementById("city").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("passcode").disabled = false;
+};
+
+   $scope.update = function(){
+
+        document.getElementById("save").style.display= "none";
+        document.getElementById("update").style.display= "block";
+
+        document.getElementById("fname").disabled = true;
+        document.getElementById("sname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("phone").disabled = true;
+        document.getElementById("cell").disabled = true;
+        document.getElementById("street").disabled = true;
+        document.getElementById("city").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("passcode").disabled = true;
+
+
+   $http.post("http://localhost:2021/update",$scope.data )
+    .then(function(response) {
+      $scope.data = response.data;
+      document.getElementById("status").style.display= "block";
+
+      setTimeout(function(){
+        document.getElementById("status").style.display= "none";
+        location.replace("http://localhost:2021/home.html");
+
+      }, 3000);
+
+    });
+};
+
+});
+
+
+</script>
+<style>
+img {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body ng-app="userApp" ng-controller="updateCtrl">
+<div class="col-md-6">
+  <h2 class="text-center">Edit User</h2>
+  
+  <div id = "status" class="alert alert-success" style="display: none;">
+    <strong >User Edit it  Success!</strong> .
+  </div>
+
+  <form >
+   
+  <center> <img src="images/logo.jpeg" alt="Avatar" style="width:200px" ></center></center>
+
+    <div class="form-group">
+      <input id = "fname" ng-model="data.fname" formControlName="FirstName" placeholder="First Name" name="FirstName" class="form-control" id="FirstName" disabled>
+    </div>
+
+    <div class="form-group">
+        <input id = "sname" ng-model="data.sname" formControlName="LastName" placeholder="Last Name" name="LastName" class="form-control" id="LastName" disabled>
+    </div>
+
+    <div class="form-group">
+      <input  id = "email" ng-model="data.email" formControlName="Email" placeholder="Email" name="Email" class="form-control" id="Email" disabled>
+    </div>
+
+     <div class="form-group">
+      <input  id = "username" ng-model="data.username" formControlName="username" placeholder="Username" name="Username" class="form-control" id="Email" disabled>
+    </div>
+
+    <div class="form-group">
+      <input  id = "phone" ng-model="data.phone" formControlName="phone" placeholder="phone" name="phone" class="form-control" id="phone" disabled>
+    </div>
+
+    <div class="form-group">
+      <input  id = "cell" ng-model="data.cell" formControlName="cell" placeholder="Cell" name="Cell" class="form-control" id="Cell" disabled>
+    </div>
+   
+    <div class="form-group">
+      <input  id = "street" ng-model="data.street" formControlName="Street" placeholder="Address" name="Address" class="form-control" id="Address" disabled>
+    </div>
+
+      <div class="form-group">
+      <input  id = "city" ng-model="data.city" formControlName="city" placeholder="City" name="city" class="form-control" id="city" disabled>
+    </div>
+      <div class="form-group">
+      <input  id = "state" ng-model="data.state" formControlName="state" placeholder="state" name="state" class="form-control" id="state" disabled>
+    </div>
+      <div class="form-group">
+      <input  id = "passcode" ng-model="data.postcode" formControlName="postcode" placeholder="postcode" name="postcode" class="form-control" id="postcode" disabled>
+    </div>
+    <td> 
+      <button id = "update" class="btn btn-info" data="{{user.id}}" ng-click ="edit()">Edit</button> 
+      <button id = "save" class="btn btn-info" data="{{user.id}}" ng-click ="update()" style="display: none;">Save</button> </td>
+
+  </form>
+</div>
+</body>
+</div>
+</html>
