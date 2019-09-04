@@ -11,15 +11,27 @@
 <script>
   var app = angular.module('userApp', []);
 
+  
   app.controller('registerCtrl', function($scope,  $http) {
+    
+
   $scope.names = ["Mr", "Mrs", "Miss"];
   $scope.genders = ["Male", "Female", "Others"];
 
 
 
    $scope.register = function(){
+    var isValid = validate();
+    debugger;
+   if (isValid == false) {
+   
+      
+			} 
+        else{
    var user = {"titile":$scope.titile,"fname":$scope.fname,"sname":$scope.sname,"email":$scope.email,"gender":$scope.gender,"street":$scope.street,"city":$scope.city,"state":$scope.state,"postcode":$scope.postcode,"username":$scope.username,"password":$scope.password,"phone":$scope.phone,"cell":$scope.cell,"nat":"IN"};
-
+   
+            
+   
       $http.post("http://localhost:2021/register",user )
     .then(function(response) {
 
@@ -33,19 +45,77 @@
         location.replace("http://localhost:2021/home.html");
       }, 2000);
     });
-};
+   
+   };
+   }     
 
 });
+        
+        
 
 
 </script>
+<script> 
+        
+    function validate()
+        { 
+                   var isValid = true;
+              
+                 $('#Email,#Address,#LastName,#FirstName,#UserName').each(function () {
+                     if ($.trim($(this).val()) == '') {
+                      console.log(this);
+                      isValid = false;
+                           if($(this).attr('id') == 'Address'){
+                               $('#AddressErrorMessage').prop('hidden', false);
+                           }
+                           if($(this).attr('id') == 'Email'){
+                               $('#EmailErrorMessage').prop('hidden', false);
+                           }
+                           if($(this).attr('id') == 'LastName'){
+                               $('#LastNameErrorMessage').prop('hidden', false);
+                           }
+                           if($(this).attr('name') == 'FirstName'){
+                               $('#FirstNameErrorMessage').prop('hidden', false);
+                           }
+                           if($(this).attr('id') == 'UserName'){
+                               $('#UserErrorMessage').prop('hidden', false);
+                           }
+                       
+                           $(this).css({
+                             
+                               "border": "1px solid red",
+                               "background": "#FFCECE"
+                           });
+                      
+                       }
+                       else if($.trim($('#Email').val()) != ''){
+                                      if(isEmail($('#Email').val()) == false){
+                                          isValid = false;
+                                          $('#emailFormatErrorMessage').prop('hidden', false);
+                                          $(this).css({
+                                              "border" : "1px solid red",
+                                              "background" : "#FFCECE"
+                                          });
+                                      }
+                                  }
+                    
+                   });
+                   return isValid;
+                  
+              }
+ function isEmail(email) {                                                                                                                                                       
+         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                //  console.log(regex);
+                return regex.test(email);
+            }
+    </script>
 </head>
 <body ng-app="userApp" ng-controller="registerCtrl">
 <div class="col-md-6">
   <h2 class="text-center">Sign Up</h2>
 
     <div id = "status" class="alert alert-success" style="display: none;">
-    <strong >Registration Success!</strong> .
+    <strong >User Registration!</strong> .
   </div>
   <form [formGroup]="editForm" ng-submit="register()">
    
@@ -54,23 +124,28 @@
     </div>
 
     <div class="form-group">
-      <input ng-model="fname" formControlName="FirstName" placeholder="First Name" name="FirstName" class="form-control" id="FirstName">
+      <input ng-model="fname" formControlName="FirstName" placeholder="First Name" name="FirstName" class="form-control required" id="FirstName">
+       <label id="FirstNameErrorMessage" style="color:red" hidden="true">FirstName cannot be blank</label>
     </div>
 
     <div class="form-group">
-        <input ng-model="sname" formControlName="LastName" placeholder="Last Name" name="LastName" class="form-control" id="LastName">
+        <input ng-model="sname" formControlName="LastName" placeholder="Last Name" name="LastName" class="form-control required" id="LastName">
+         <label id="LastNameErrorMessage" style="color:red" hidden="true">LastName cannot be blank</label>
     </div>
 
     <div class="form-group">
-      <input  ng-model="email" formControlName="Email" placeholder="Email" name="Email" class="form-control" id="Email">
+      <input  ng-model="email" formControlName="Email" placeholder="Email" name="Email" class="form-control required" id="Email">
+      <label id="EmailErrorMessage" style="color:red" hidden="true">Email cannot be blank</label>
+      <label id="emailFormatErrorMessage" style="color: red" hidden="true">Invalid Email format</label></td>
     </div>
 
      <div class="form-group">
-      <input  ng-model="username" formControlName="username" placeholder="Username" name="Username" class="form-control" id="Email">
+      <input  ng-model="username" formControlName="username" placeholder="Username" name="Username" class="form-control required" id="UserName">
+      <label id="UserErrorMessage" style="color:red" hidden="true">User Name cannot be blank</label>
     </div>
 
     <div class="form-group">
-      <input  ng-model="password" type="password" formControlName="Password" placeholder="Password" name="Password" class="form-control" id="Email">
+      <input  ng-model="password" type="password" formControlName="Password" placeholder="Password" name="Password" class="form-control" id="email">
     </div>
 
     <div class="form-group">
@@ -86,7 +161,8 @@
     </div>
    
     <div class="form-group">
-      <input  ng-model="street" formControlName="Street" placeholder="Address" name="Address" class="form-control" id="Address">
+      <input  ng-model="street" formControlName="Street" placeholder="Address" name="Address" class="form-control required" id="Address">
+      <label id="AddressErrorMessage" style="color:red" hidden="true">Address cannot be blank</label>
     </div>
 
       <div class="form-group">
@@ -102,6 +178,7 @@
     <button class="btn btn-info">Sign Up</button>
   </form>
 </div>
+
 </body>
 </div>
 </html>

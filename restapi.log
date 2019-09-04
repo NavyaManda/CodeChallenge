@@ -1596,3 +1596,132 @@ Verify the connector's configuration, identify and stop any process that's liste
 2019-08-31 13:12:22.580  INFO 18690 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-08-31 13:12:22.582  INFO 18690 --- [Thread-9] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 2019-08-31 13:12:22.588  INFO 18690 --- [Thread-9] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-09-03 20:30:49.421  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : Starting RestApisApplication on Navyas-MacBook-Pro.local with PID 29664 (/Users/NavyaManda/project/CodeChallenge/CodeChallenge/target/classes started by NavyaManda in /Users/NavyaManda/project/CodeChallenge/CodeChallenge)
+2019-09-03 20:30:49.429  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : No active profile set, falling back to default profiles: default
+2019-09-03 20:30:49.471  INFO 29664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 20:30:49.472  INFO 29664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 20:30:50.103  INFO 29664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 20:30:50.127  INFO 29664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-09-03 20:30:50.481  INFO 29664 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$599dbd00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 20:30:50.958  INFO 29664 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 2021 (http)
+2019-09-03 20:30:50.988  INFO 29664 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-09-03 20:30:50.989  INFO 29664 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-09-03 20:30:51.098  INFO 29664 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-09-03 20:30:51.098  INFO 29664 --- [restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1626 ms
+2019-09-03 20:30:51.267  INFO 29664 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-09-03 20:30:51.458  INFO 29664 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-09-03 20:30:51.535  INFO 29664 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 20:30:51.633  INFO 29664 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-09-03 20:30:51.634  INFO 29664 --- [restartedMain] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-09-03 20:30:51.832  INFO 29664 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 20:30:52.016  INFO 29664 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 20:30:52.269  INFO 29664 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:30:52.496  INFO 29664 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:30:52.544  WARN 29664 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 20:30:52.715  INFO 29664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 20:30:52.777  INFO 29664 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 2021 (http) with context path ''
+2019-09-03 20:30:52.781  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : Started RestApisApplication in 23.832 seconds (JVM running for 29.788)
+2019-09-03 20:31:01.455  INFO 29664 --- [http-nio-2021-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 20:31:01.456  INFO 29664 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-09-03 20:31:01.467  INFO 29664 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 11 ms
+2019-09-03 20:35:51.294  INFO 29664 --- [Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:35:51.295  INFO 29664 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:35:51.297  INFO 29664 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-09-03 20:35:51.305  INFO 29664 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-09-03 20:36:11.517  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : Starting RestApisApplication on Navyas-MacBook-Pro.local with PID 29664 (/Users/NavyaManda/project/CodeChallenge/CodeChallenge/target/classes started by NavyaManda in /Users/NavyaManda/project/CodeChallenge/CodeChallenge)
+2019-09-03 20:36:11.518  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : No active profile set, falling back to default profiles: default
+2019-09-03 20:36:11.745  INFO 29664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 20:36:11.754  INFO 29664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-09-03 20:36:11.818  INFO 29664 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$599dbd00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 20:36:11.912  INFO 29664 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 2021 (http)
+2019-09-03 20:36:11.914  INFO 29664 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-09-03 20:36:11.915  INFO 29664 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-09-03 20:36:11.940  INFO 29664 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-09-03 20:36:11.941  INFO 29664 --- [restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 420 ms
+2019-09-03 20:36:12.002  INFO 29664 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2019-09-03 20:36:12.012  INFO 29664 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2019-09-03 20:36:12.021  INFO 29664 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 20:36:12.033  INFO 29664 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 20:36:12.050  INFO 29664 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:36:12.165  INFO 29664 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:36:12.171  WARN 29664 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 20:36:12.241  INFO 29664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 20:36:12.257  INFO 29664 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 2021 (http) with context path ''
+2019-09-03 20:36:12.258  INFO 29664 --- [restartedMain] c.r.a.RestApisApplication                : Started RestApisApplication in 20.796 seconds (JVM running for 349.277)
+2019-09-03 20:36:12.261  INFO 29664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-03 20:36:21.719  INFO 29664 --- [Thread-10] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:36:21.719  INFO 29664 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:36:21.720  INFO 29664 --- [Thread-10] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2019-09-03 20:36:21.726  INFO 29664 --- [Thread-10] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2019-09-03 20:41:34.190  INFO 29760 --- [restartedMain] c.r.a.RestApisApplication                : Starting RestApisApplication on Navyas-MacBook-Pro.local with PID 29760 (/Users/NavyaManda/project/CodeChallenge/CodeChallenge/target/classes started by NavyaManda in /Users/NavyaManda/project/CodeChallenge/CodeChallenge)
+2019-09-03 20:41:34.196  INFO 29760 --- [restartedMain] c.r.a.RestApisApplication                : No active profile set, falling back to default profiles: default
+2019-09-03 20:41:34.229  INFO 29760 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 20:41:34.230  INFO 29760 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 20:41:34.749  INFO 29760 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 20:41:34.769  INFO 29760 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-09-03 20:41:35.105  INFO 29760 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd764ee6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 20:41:35.505  INFO 29760 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 2021 (http)
+2019-09-03 20:41:35.530  INFO 29760 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-09-03 20:41:35.530  INFO 29760 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-09-03 20:41:35.620  INFO 29760 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-09-03 20:41:35.620  INFO 29760 --- [restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1390 ms
+2019-09-03 20:41:35.768  INFO 29760 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-09-03 20:41:35.918  INFO 29760 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-09-03 20:41:35.985  INFO 29760 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 20:41:36.052  INFO 29760 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-09-03 20:41:36.053  INFO 29760 --- [restartedMain] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-09-03 20:41:36.184  INFO 29760 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 20:41:36.315  INFO 29760 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 20:41:36.503  INFO 29760 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:41:36.710  INFO 29760 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:41:36.751  WARN 29760 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 20:41:36.924  INFO 29760 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 20:41:36.985  INFO 29760 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 2021 (http) with context path ''
+2019-09-03 20:41:36.989  INFO 29760 --- [restartedMain] c.r.a.RestApisApplication                : Started RestApisApplication in 23.174 seconds (JVM running for 28.881)
+2019-09-03 20:42:06.759  INFO 29760 --- [http-nio-2021-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 20:42:06.760  INFO 29760 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-09-03 20:42:06.767  INFO 29760 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2019-09-03 20:46:23.173  INFO 29760 --- [Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:46:23.175  INFO 29760 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:46:23.177  INFO 29760 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-09-03 20:46:23.184  INFO 29760 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-09-03 20:47:12.275  INFO 29811 --- [restartedMain] c.r.a.RestApisApplication                : Starting RestApisApplication on Navyas-MacBook-Pro.local with PID 29811 (/Users/NavyaManda/project/CodeChallenge/CodeChallenge/target/classes started by NavyaManda in /Users/NavyaManda/project/CodeChallenge/CodeChallenge)
+2019-09-03 20:47:12.281  INFO 29811 --- [restartedMain] c.r.a.RestApisApplication                : No active profile set, falling back to default profiles: default
+2019-09-03 20:47:12.317  INFO 29811 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 20:47:12.317  INFO 29811 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 20:47:12.867  INFO 29811 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 20:47:12.888  INFO 29811 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-09-03 20:47:13.248  INFO 29811 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a708d110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 20:47:13.685  INFO 29811 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 2021 (http)
+2019-09-03 20:47:13.709  INFO 29811 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-09-03 20:47:13.710  INFO 29811 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-09-03 20:47:13.802  INFO 29811 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-09-03 20:47:13.803  INFO 29811 --- [restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1485 ms
+2019-09-03 20:47:13.956  INFO 29811 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-09-03 20:47:14.107  INFO 29811 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-09-03 20:47:14.177  INFO 29811 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 20:47:14.240  INFO 29811 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-09-03 20:47:14.242  INFO 29811 --- [restartedMain] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-09-03 20:47:14.384  INFO 29811 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 20:47:14.520  INFO 29811 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 20:47:14.714  INFO 29811 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:47:14.928  INFO 29811 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:47:14.976  WARN 29811 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 20:47:15.174  INFO 29811 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 20:47:15.233  INFO 29811 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 2021 (http) with context path ''
+2019-09-03 20:47:15.238  INFO 29811 --- [restartedMain] c.r.a.RestApisApplication                : Started RestApisApplication in 23.358 seconds (JVM running for 29.039)
+2019-09-03 20:47:19.719  INFO 29811 --- [http-nio-2021-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 20:47:19.720  INFO 29811 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-09-03 20:47:19.734  INFO 29811 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 14 ms
+2019-09-03 20:48:00.902  INFO 29811 --- [Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-03 20:48:00.903  INFO 29811 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 20:48:00.906  INFO 29811 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-09-03 20:48:00.912  INFO 29811 --- [Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

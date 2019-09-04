@@ -56,13 +56,14 @@ app.controller('userCtrl', function($scope, $http, $window) {
 <body ng-app="userApp" >
 <div ng-controller="userCtrl" class="col-md-10">
   <h2 class="text-center"> Users List </h2>
+  
+<div id = "status" class="alert alert-success" style="display: none;">
+    <strong > User Deleted!!</strong> .
+  </div>
   <div class="col-md-7">
     <a href="/registration.html"><button class="btn btn-info" onclick =" "> Add user</button></a> 
   </div>
 
-<div id = "status" class="alert alert-success" style="display: none;">
-    <strong >Deleted Success!</strong> .
-  </div>
 <div>
 
   <table class="table table-striped">
@@ -83,7 +84,6 @@ app.controller('userCtrl', function($scope, $http, $window) {
          <td> {{user.fname}} </td>
          <td> {{user.sname}} </td>
          <td> {{user.email}} </td>
-          <td><img src="images/logo.jpeg" alt="Avatar" style="width:100px" ></td>
          <td> <button class="btn btn-info" data="{{user.id}}" ng-click ="update(user.id)">View</button> </td>
          <td> <button class="btn btn-info" data="{{user.id}}" ng-click ="delete(user.id)">Delete</button> </td>
         
