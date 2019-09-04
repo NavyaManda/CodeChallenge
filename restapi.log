@@ -2742,3 +2742,7 @@ Caused by: java.lang.ClassNotFoundException: com.rest.api.resource.ElkExampleSpr
 2019-09-04 00:02:44.473  INFO 30384 --- [http-nio-2021-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-09-04 00:02:44.474  INFO 30384 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2019-09-04 00:02:44.483  INFO 30384 --- [http-nio-2021-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 9 ms
+2019-09-04 00:04:37.232  INFO 30384 --- [Thread-9] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-04 00:04:37.233  INFO 30384 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-04 00:04:37.236  INFO 30384 --- [Thread-9] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-09-04 00:04:37.242  INFO 30384 --- [Thread-9] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
